@@ -1,33 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Math Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathAndSkills</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-        @media (max-width: 768px) {
-            iframe {
-                height: 80vh;
-            }
-        }
+      :root {
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #f6f8fb;
+        color: #0f172a;
+      }
+
+      .page {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      }
+
+      header {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e2e8f0;
+        background: #ffffff;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .fallback {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .fallback a {
+        color: #2563eb;
+      }
     </style>
-</head>
-<body>
-    <iframe src="https://wmath.pages.dev/" title="Math Website"></iframe>
-</body>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>mathandskills.com</h1>
+      </header>
+      <iframe
+        src="https://wmath.pages.dev/"
+        title="Embedded WMath website"
+        loading="eager"
+        referrerpolicy="no-referrer"
+      ></iframe>
+      <p class="fallback">
+        If the embedded site does not load, open it directly:
+        <a href="https://wmath.pages.dev/" target="_blank" rel="noopener noreferrer"
+          >https://wmath.pages.dev/</a
+        >
+      </p>
+    </div>
+  </body>
 </html>
